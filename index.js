@@ -16,11 +16,11 @@ mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection 
 mongoose.set('debug', true)
 
 require('./controllers/auth')(app);
-require('./controllers/stories')(app);
-require('./controllers/storyComponents')(app);
+require('./controllers/medications')(app);
+require('./controllers/therapies')(app);
 
 app.get('/', function(req, res) {
-  res.send('The Story API is running!')
+  res.send('The API is running!')
 })
 
 app.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}`));
