@@ -6,7 +6,7 @@ module.exports = (app) => {
     Medication
       .find({})
       .then((medications) => {
-        res.json(medication)
+        res.json(medications)
       }).catch((err) => {
         console.log(err.message)
       })
